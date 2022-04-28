@@ -54,7 +54,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/validaUsuario")
-	public ModelAndView login(@Valid UsuarioDto model, BindingResult bindingResult) {		
+	public ModelAndView validalogin(@Valid UsuarioDto model) {		
 		boolean status = false;
 		List<Usuario> listaUsuario = usuarioRepository.findAll();		
 		for (Usuario usuario : listaUsuario) {
